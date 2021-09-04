@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 30-08-2021 a las 17:43:50
+-- Tiempo de generación: 04-09-2021 a las 03:09:16
 -- Versión del servidor: 10.4.11-MariaDB
 -- Versión de PHP: 7.4.8
 
@@ -20,6 +20,30 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `test_productos`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `categorias`
+--
+
+CREATE TABLE `categorias` (
+  `id` int(11) NOT NULL,
+  `descripcion` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `categorias`
+--
+
+INSERT INTO `categorias` (`id`, `descripcion`) VALUES
+(1, 'Oficina'),
+(2, 'Inmuebles o propiedades'),
+(3, 'Deportes'),
+(4, 'Hogar'),
+(5, 'Electrónica'),
+(6, 'Musica'),
+(7, 'Mascotas');
 
 -- --------------------------------------------------------
 
@@ -45,6 +69,12 @@ CREATE TABLE `productos` (
 --
 
 --
+-- Indices de la tabla `categorias`
+--
+ALTER TABLE `categorias`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indices de la tabla `productos`
 --
 ALTER TABLE `productos`
@@ -53,6 +83,12 @@ ALTER TABLE `productos`
 --
 -- AUTO_INCREMENT de las tablas volcadas
 --
+
+--
+-- AUTO_INCREMENT de la tabla `categorias`
+--
+ALTER TABLE `categorias`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT de la tabla `productos`
